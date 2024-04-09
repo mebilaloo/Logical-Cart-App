@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash, faPlus, faMinus, faShoppingCart, faSync, faRecycle } from '@fortawesome/free-solid-svg-icons';
+import "./style.css";
 const App = () => {
   const [counter, setCounter] = useState([0, 0, 0, 0]);
   const [cartCounter, setCartCounter] = useState(0);
@@ -41,29 +43,35 @@ const App = () => {
   }
 
   return (
-    <div>
-      <div className="Header">
-        <div className="Reset button">
-          <button onClick={handelReset}>Reset values</button>
-        </div>
-        <div className="Reload button">
-          <button onClick={handelRefresh}>Reload page</button>
-        </div>
+    <div className="AppCounter">
+      <nav className="navbar ">
+      <div className="navbar-brand">
+      <FontAwesomeIcon icon={faShoppingCart} className="fa m-2" />
+          <span className="badge badge-info badge-pill m-2">{cartCounter}</span>
+          &nbsp;
+          <label>Items</label>
+          </div>
+          </nav>
 
-        <div className="items box">
-          {cartCounter} &nbsp;
-          <label>items</label>
+    <div className="">
+        <div className="row">
+          <button className=" btn Reset-Btn m-2" onClick={handelReset}><FontAwesomeIcon icon={faSync} className="fa" /></button>
+          
+          <button className=" btn Reload-Btn m-2" onClick={handelRefresh}><FontAwesomeIcon icon={faRecycle} className="fa" /></button>
         </div>
-      </div>
+        
       {counter.map((n, i) => (
-        <div key={i}>
-          <p>{n > 0 ? n : "zero"}</p>
-
-          <button onClick={() => handelIncrement(i)}>+</button>
-          <button onClick={() => handelDecrement(i)}>-</button>
-          <button onClick={() => handelDelete(i)}>Delete</button>
+        <div  className="row" key={i}>
+        
+          <span className="badge badge-zero m-2">{n > 0 ? n : "zero"}</span>
+          <button className="btn btn-plus m-2"  onClick={() => handelIncrement(i)}><FontAwesomeIcon icon={faPlus} className="fa" /></button>
+          <button className="btn btn-minus m-2"  onClick={() => handelDecrement(i)}><FontAwesomeIcon icon={faMinus} className="fa" /></button>
+          <button className="btn btn-delete m-2" onClick={() => handelDelete(i)}><FontAwesomeIcon icon={faTrash} className="custom-trash-icon fa" /></button>
+         
         </div>
       ))}
+      </div>
+
     </div>
   );
 };

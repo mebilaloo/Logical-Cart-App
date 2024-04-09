@@ -1,0 +1,135 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+body{
+margin: 0;
+padding:0;
+
+}
+.AppCounter{
+display: grid;
+margin-top: 2rem;
+margin: 5rem 10rem;
+justify-content: center;
+padding: 50px 10px;
+border: 3px solid #011214;
+border-radius: 12px;
+background-color: #ddf2f5;
+background-image: linear-gradient(to right, #9796f0, #fbc7d4);
+
+
+}
+
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px / 1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.btn {
+    cursor: pointer !important;
+}
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    background-color: initial;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    
+}
+.m-2 {
+    margin: .5rem !important;
+}
+.badge-zero{
+    background-color:#ffc107;
+    color: #212529;
+}
+.badge{
+    font-weight: 700;
+    text-align: center;
+    padding:.25rem .4rem;
+    line-height: 1;
+    border-radius: .25rem;
+    font-size: 24px;
+    display: inline-block;  
+}
+.badge {
+    width: 70px !important;
+}
+.badge-info {
+    color: #fff;
+    background-color: #17a2b8;
+
+}
+.badge-pill{
+    padding-right: .6em;
+    padding-left: .6em;
+    border-radius: 10rem;
+}
+.navbar {
+    position: relative;
+    padding: .5rem 1rem;
+}
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.navbar-brand {
+    display: inline-block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.row,.navbar{
+    justify-content: center !important;
+    
+}
+
+.btn-plus{
+        color: #fff;
+        background-color: #6c757d;
+        border-color: #6c757d;    
+}
+.btn-minus{
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+.btn-delete{
+        color: #fff;
+        background-color: #dc3545;
+        border-color: #dc3545;
+}
+.Reset-Btn{
+        color: #fff;
+        background-color: #28a745;
+        border-color: #28a745;
+    filter: drop-shadow(0 0 2em #646cffaa);
+
+}
+.Reload-Btn{
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    filter: drop-shadow(0 0 2em #61dafbaa);
+
+}
